@@ -200,15 +200,17 @@ button {
 
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 30px;
+        font-size: 40px;
+        white-space: nowrap;
+    }
+    .h2 {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    text-transform: uppercase;  /* Harfleri büyük yap */
+    font-size: 12px;
+    color: #0b3652;
+    transform: scaleY(1,5); /* Yalnızca dikeyde 2 kat büyütme */
     }
     .logos:hover {
     background-color: #d9edfa;  
-    }
-}
-
-@media screen and (max-width: 500px) {
-    h1 {
-        font-size: 30px;
     }
 }
