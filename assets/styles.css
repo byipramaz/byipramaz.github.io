@@ -202,6 +202,9 @@ button {
     h1 {
         font-size: 30px;
     }
+    .logos:hover {
+    background-color: #d9edfa;  
+    }
 }
 
 @media screen and (max-width: 500px) {
