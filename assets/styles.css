@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+}
+
+a {
+    text-decoration: none;
+    color: #a6a6a6;
+
+}
+.right > a:hover {
+    color: #0b3652;
+    text-decoration: underline;
+}
+
+h1 {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    text-transform: uppercase;  /* Harfleri büyük yap */
+    font-size: 82px; /* Büyük font boyutu (istediğiniz gibi ayarlayabilirsiniz) */
+    margin: 0 0 0 0;
+    color: #0b3652;
+}
+
+.h2 {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    text-transform: uppercase;  /* Harfleri büyük yap */
+    font-size: 25px;
+    color: #0b3652;
+    transform: scaleY(1,5); /* Yalnızca dikeyde 2 kat büyütme */
+}
+.h3 {
+    font-family: 'Mulish', sans-serif;
+    color: #0b3652;
+}
+
+.content {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.left {
+    height: 100%;
+    width: 18%;
+    background-color: #1a82c7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    height: 100%;
+    width: 82%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.hi {
+    width: 100px;
+    height: 40px;
+    background-color: #0b3652;
+    border-radius: 0px 100px 100px 100px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
+.bcy {
+    font-size: 60px;
+}
+
+.image {
+    width: 160px;
+    height: 160px;
+    border: 8px solid #114f78;
+    border-radius: 100%;
+    margin: 0 0 20px 0;
+    background-image: url('img/profile.jpg'); /* Profil resmi URL'si */
+    background-size: cover; /* Resmin tüm alanı kaplamasını sağlar */
+    background-position: center; /* Resmi merkezde konumlandırır */
+}
+
+.image img {
+    width: 100%;  /* Resmi div'in içine sığacak şekilde büyüt */
+    height: 100%; /* Yüksekliği de aynı şekilde ayarla */
+    border-radius: 50%; /* Resmi yuvarlak hale getir */
+}
+
+.logos {
+    background-color: white;
+    width: 160px;
+    height: 40px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+    cursor: pointer;
+    color: #114f78;
+    border-radius: 10px;
+}
+
+.logos:hover {
+    background-color: #d9edfa;  
+    margin-left: 50px;
+}
+
+.logos > i {
+    font-size: 30px;
+}
+
+.topbar {
+    height: 50px;
+    width: 100vw;
+    background-color: #1872ad;
+    position: fixed;
+    top: 0;  /* Üstte sabitlenecek */
+    display: none;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+button {
+    background-color: #1872ad;
+    color: white;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    border: none;
+}
+
+.profilebar {
+    justify-content: center;
+    padding-left: 24%;
+    display: none;
+}
+
+.side-bar {
+    position: fixed;
+    left: -1500px;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a82c7;
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Sol bar görünür olduğunda */
+.side-bar.open {
+    left: 0; /* Sol bar tamamen görünür oluyor */
+}
+
+/* Sol bar görünür olduğunda */
+.side-bar.open {
+    left: 0; /* Sol bar tamamen görünür oluyor */
+}
+
+@media screen and (max-width: 1100px) {
+    .left {
+        display: none; /* Mobilde sol bar gizli */
+    }
+    .topbar {
+        display: flex;
+    }
+    .profilebar {
+        display: flex;
+    }
+    .logos {
+        background-color: white;
+        width: 240px;
+        height: 60px;
+        font-size: 30px;
+    }
+    .logos > i {
+        font-size: 45px;
+    }
+    body {
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 738px) {
+    h1 {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 40px;
+    }
+}
